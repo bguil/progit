@@ -143,7 +143,7 @@ Vous feriez les étapes suivantes :
 Vous feriez ce qui suit :
 
 1.	Revenir à la branche de production
-2.	Créer un branche et y développer le correctif
+2.	Créer une branche et y développer le correctif
 3.	Après qu'il a été testé, fusionner la branche de correctif et pousser le résultat à la production
 4.	Rebasculer à la branche initiale et continuer le travail
 
@@ -426,13 +426,17 @@ Si vous souhaitez réellement effacer cette branche et perdre ainsi le travail r
 
 ## Travailler avec les branches ##
 
-Maintenant que vous détenez les bases des branches et fusions, que pouvez ou devez vous faire avec ? Dans cette section, nous aborderons certaines des façons de travailler les plus courantes, rendues possible par cette gestion légère des branches, afin que vous puissiez décider si vous désirez l'intégrer dans votre propre cycle de dévelopement logiciel.
+Maintenant que vous détenez les bases des branches et fusions, que pouvez ou devez vous faire avec ?
+Dans cette section, nous aborderons certaines des façons de travailler les plus courantes, rendues possible par cette gestion légère des branches, afin que vous puissiez décider si vous désirez l'intégrer dans votre propre cycle de dévelopement logiciel.
 
 ### Branches au long-cours###
 
-Parce que Git utilise une simple fusion à 3 participants, fusionner une branche dans une autre de façon répété sur une longue période se fait générale facilement. Cela veut donc dire que vous pouvez avoir plusieurs branches ouvertes, utilisées à différentes étapes de votre cycle de développement logiciel; vous pouvez fusionner régulièrement certaines d'entre elles dans d'autres.
+Parce que Git utilise une simple fusion à 3 participants, fusionner une branche dans une autre de façon répétée sur une longue période se fait générale facilement.
+Cela veut donc dire que vous pouvez avoir plusieurs branches ouvertes, utilisées à différentes étapes de votre cycle de développement logiciel ; vous pouvez fusionner régulièrement certaines d'entre elles dans d'autres.
 
-Beaucoup de développeurs de Git ont une façon de travailler qui respecte cette approche, comme par exemple en ayant uniquement du code totalement stable dans leur branche `master` — potentiellement même uniquement du code qui va ou a déjà été délivré. Ils ont une autre branche parallèle appelée `develop` or `next` où ils travaillent, ou utilisent pour tester la stabilité de leurs développements — elle n'est pas nécessairement toujours stable, mais dès qu'elle atteint une état stable, elle peut-être fusionnée dans la branche `master`. Elle est utilisée pour importer des branches spécifiques, ciblées (des branches de courtes durée de vie, comme votre branche `prob53` précédente) quand elles sont prêtes, pour être sûr qu'elles réussissent aux tests et ne vont pas introduire de bugs.
+Beaucoup de développeurs de Git ont une façon de travailler qui respecte cette approche, comme par exemple en ayant uniquement du code totalement stable dans leur branche `master` — potentiellement même uniquement du code qui va ou a déjà été délivré.
+Ils ont une autre branche parallèle appelée `develop` or `next` où ils travaillent, ou utilisent pour tester la stabilité de leurs développements — elle n'est pas nécessairement toujours stable, mais dès qu'elle atteint un état stable, elle peut-être fusionnée dans la branche `master`.
+Elle est utilisée pour importer des branches spécifiques, ciblées (des branches de courtes durée de vie, comme votre branche `prob53` précédente) quand elles sont prêtes, pour être sûr qu'elles réussissent aux tests et ne vont pas introduire de bugs.
 
 In reality, we’re talking about pointers moving up the line of commits you’re making. The stable branches are farther down the line in your commit history, and the bleeding-edge branches are farther up the history (see Figure 3-18).
 
